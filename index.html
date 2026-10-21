@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FixCore AI — Premium Mobile Repair Ecosystem</title>
+  <meta name="description" content="FixCore AI is an Apple-inspired futuristic mobile repair service platform with AI diagnostics, live tracking, smart inventory, and revenue analytics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=SF+Pro+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Floating Notifications -->
+  <div id="notification-container"></div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <path d="M14 2L24 8V20L14 26L4 20V8L14 2Z" stroke="url(#grad1)" stroke-width="2" fill="none"/>
+          <circle cx="14" cy="14" r="4" fill="url(#grad1)"/>
+          <defs>
+            <linearGradient id="grad1" x1="4" y1="2" x2="24" y2="26" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6366f1"/>
+              <stop offset="1" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <span class="logo-text">FixCore <span class="ai-badge">AI</span></span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-group">
+        <p class="nav-label">Overview</p>
+        <a class="nav-item active" data-page="dashboard" id="nav-dashboard">
+          <span class="nav-icon">⬡</span> Dashboard
+        </a>
+        <a class="nav-item" data-page="analytics" id="nav-analytics">
+          <span class="nav-icon">◈</span> Analytics
+        </a>
+      </div>
+      <div class="nav-group">
+        <p class="nav-label">Repair Ops</p>
+        <a class="nav-item" data-page="tracker" id="nav-tracker">
+          <span class="nav-icon">◎</span> Repair Tracker
+        </a>
+        <a class="nav-item" data-page="diagnostics" id="nav-diagnostics">
+          <span class="nav-icon">◉</span> Diagnostics
+        </a>
+        <a class="nav-item" data-page="timeline" id="nav-timeline">
+          <span class="nav-icon">⊞</span> Timeline
+        </a>
+      </div>
+      <div class="nav-group">
+        <p class="nav-label">Management</p>
+        <a class="nav-item" data-page="technicians" id="nav-technicians">
+          <span class="nav-icon">◐</span> Technicians
+        </a>
+        <a class="nav-item" data-page="customers" id="nav-customers">
+          <span class="nav-icon">◑</span> Customers
+        </a>
+        <a class="nav-item" data-page="inventory" id="nav-inventory">
+          <span class="nav-icon">⊟</span> Inventory
+        </a>
+      </div>
+      <div class="nav-group">
+        <p class="nav-label">Finance</p>
+        <a class="nav-item" data-page="billing" id="nav-billing">
+          <span class="nav-icon">⬡</span> QR Billing
+        </a>
+        <a class="nav-item" data-page="warranty" id="nav-warranty">
+          <span class="nav-icon">◈</span> Warranty
+        </a>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-profile">
+        <div class="avatar">AP</div>
+        <div class="user-info">
+          <p class="user-name">Admin Pro</p>
+          <p class="user-role">Super Admin</p>
+        </div>
+        <div class="status-dot"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content" id="main-content">
+    <!-- Top Bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="menu-btn" id="menu-btn">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="breadcrumb" id="breadcrumb">Dashboard</div>
+      </div>
+      <div class="topbar-right">
+        <div class="search-bar">
+          <span class="search-icon">⌕</span>
+          <input type="text" placeholder="Search jobs, devices, customers..." id="global-search" />
+        </div>
+        <button class="notif-btn" id="notif-btn">
+          <span class="bell-icon">🔔</span>
+          <span class="badge" id="notif-badge">4</span>
+        </button>
+        <div class="topbar-avatar">AP</div>
+      </div>
+    </header>
+
+    <!-- Pages -->
+    <div class="page active" id="page-dashboard"><!-- Dashboard injected by JS --></div>
+    <div class="page" id="page-analytics"><!-- Analytics injected by JS --></div>
+    <div class="page" id="page-tracker"><!-- Tracker injected by JS --></div>
+    <div class="page" id="page-diagnostics"><!-- Diagnostics injected by JS --></div>
+    <div class="page" id="page-timeline"><!-- Timeline injected by JS --></div>
+    <div class="page" id="page-technicians"><!-- Technicians injected by JS --></div>
+    <div class="page" id="page-customers"><!-- Customers injected by JS --></div>
+    <div class="page" id="page-inventory"><!-- Inventory injected by JS --></div>
+    <div class="page" id="page-billing"><!-- Billing injected by JS --></div>
+    <div class="page" id="page-warranty"><!-- Warranty injected by JS --></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
